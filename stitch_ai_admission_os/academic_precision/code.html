@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Admission OS - Academic Precision & Student Reviews</title>
+    <style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config={theme:{extend:{"colors":{"surface-container-low":"#e3f9ed","inverse-surface":"#22342d","on-background":"#0d1f18","on-primary-fixed":"#002114","on-secondary":"#ffffff","surface-container":"#def3e7","on-primary-fixed-variant":"#214f3c","on-secondary-fixed-variant":"#4a473b","on-primary":"#ffffff","on-tertiary-fixed-variant":"#842509","surface":"#e9fef3","surface-tint":"#3a6753","on-secondary-container":"#676255","primary-fixed":"#bceed3","surface-container-lowest":"#ffffff","on-error":"#ffffff","tertiary-fixed-dim":"#ffb5a1","on-secondary-fixed":"#1e1c12","surface-bright":"#e9fef3","secondary-fixed":"#e9e2d2","on-error-container":"#93000a","on-surface-variant":"#414944","inverse-on-surface":"#e0f6ea","surface-container-highest":"#d2e7dc","primary-fixed-dim":"#a1d1b8","surface-container-high":"#d8ede2","surface-variant":"#d2e7dc","surface-dim":"#cadfd4","secondary":"#625e51","on-surface":"#0d1f18","tertiary-container":"#812307","on-tertiary-container":"#ff967a","inverse-primary":"#a1d1b8","background":"#e9fef3","secondary-fixed-dim":"#ccc6b6","error":"#ba1a1a","secondary-container":"#e6dfcf","primary-container":"#1f4d3a","on-tertiary-fixed":"#3b0800","primary":"#023625","outline-variant":"#c0c9c2","on-tertiary":"#ffffff","error-container":"#ffdad6","tertiary":"#5d1200","on-primary-container":"#8dbda4","outline":"#717973"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"stack-md":"16px","stack-lg":"24px","margin-page":"32px","rail-width":"320px","pipeline-height":"80px","gutter":"24px","stack-sm":"8px"},"fontFamily":{"body-sm":["IBM Plex Sans"],"body-lg":["IBM Plex Sans"],"body-md":["IBM Plex Sans"],"status-mono":["IBM Plex Mono"],"headline-sm":["Fraunces"],"headline-sm-mobile":["Fraunces"],"label-mono":["IBM Plex Mono"],"headline-md":["Fraunces"],"display-lg":["Fraunces"]},"fontSize":{"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"status-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-sm":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-sm-mobile":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-mono":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}],"headline-md":["32px",{"lineHeight":"40px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}
+    </script>
+</head>
+<body class="bg-background font-body-md text-on-background">
+    <!-- Sidebar Navigation -->
+    <aside class="fixed left-0 top-0 h-full w-rail-width bg-surface-container border-r border-outline-variant z-50 flex flex-col">
+        <div class="p-stack-lg border-b border-outline-variant flex items-center justify-between">
+            <a href="/" class="font-headline-sm text-headline-sm text-primary uppercase tracking-tight">Admission OS</a>
+            <span class="text-label-mono font-label-mono bg-primary text-on-primary px-2 py-0.5">V2.0</span>
+        </div>
+        <div class="flex-1 flex flex-col p-stack-lg gap-stack-lg overflow-y-auto">
+            <div class="space-y-stack-sm">
+                <p class="text-label-mono font-label-mono text-on-surface-variant uppercase">Review Agent Matrix</p>
+                <div class="bg-surface-container-lowest border border-outline-variant p-stack-md flex flex-col gap-2 text-sm font-body-sm">
+                    <div class="flex items-center gap-2 text-primary font-semibold">
+                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                        <span>Trust & Review Engine</span>
+                    </div>
+                    <p class="text-xs text-on-surface-variant">Analyzing real alumni feedback, placement stats, and campus sentiment across institutions.</p>
+                </div>
+            </div>
+            <nav class="flex flex-col gap-stack-sm">
+                <a class="flex items-center gap-stack-md p-stack-md text-on-surface-variant hover:bg-surface-container-high transition-all border border-transparent" href="/">
+                    <span class="material-symbols-outlined">account_balance</span>
+                    <span class="font-body-md">College Discovery</span>
+                </a>
+                <a class="flex items-center gap-stack-md p-stack-md text-on-surface-variant hover:bg-surface-container-high transition-all border border-transparent" href="/matched">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <span class="font-body-md">Matched Matrix</span>
+                </a>
+                <a aria-current="page" class="flex items-center gap-stack-md p-stack-md transition-all border border-transparent bg-primary text-on-primary" href="/reviews">
+                    <span class="material-symbols-outlined">rate_review</span>
+                    <span class="font-body-md">Student Reviews</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="pl-rail-width pb-pipeline-height">
+        <header class="fixed top-0 left-rail-width right-0 h-16 bg-surface/80 backdrop-blur-md border-b border-outline-variant z-40 flex items-center justify-between px-margin-page">
+            <div class="flex items-center gap-stack-lg">
+                <div class="flex items-center gap-stack-sm text-status-mono font-status-mono text-on-surface-variant">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    <span>REVIEW_AGENT_ONLINE</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-stack-md">
+                <a href="/" class="text-xs font-label-mono bg-primary text-on-primary px-3 py-1.5 rounded hover:bg-primary-container transition-colors">← Back to Search</a>
+            </div>
+        </header>
+
+        <main class="pt-16 min-h-screen">
+            <div class="p-margin-page max-w-6xl mx-auto flex flex-col gap-stack-lg">
+                <div>
+                    <h1 class="font-headline-md text-headline-md text-primary">Academic Precision & Sentiment Intelligence</h1>
+                    <p class="font-body-lg text-on-surface-variant mt-1">Verified student insights, placement distributions, and campus rating breakdowns for top institutions.</p>
+                </div>
+
+                <!-- Review Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+                    <!-- College 1 -->
+                    <div class="bg-surface border border-outline-variant rounded-xl p-stack-lg shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="font-headline-sm text-xl font-semibold text-on-surface">Sinhgad College of Engineering, Pune</h3>
+                                    <span class="text-xs font-status-mono text-on-surface-variant">Pune, Maharashtra • SPPU Affiliated</span>
+                                </div>
+                                <span class="bg-primary text-on-primary font-status-mono text-xs px-2.5 py-1 rounded">4.0 / 5.0 ⭐</span>
+                            </div>
+
+                            <div class="space-y-3 my-4">
+                                <div class="bg-surface-container p-3 rounded-lg border border-outline-variant text-xs">
+                                    <div class="font-semibold text-primary mb-1">💼 Placement Report</div>
+                                    <p class="text-on-surface-variant">Highest CTC: ₹18 LPA | Median CTC: ₹5.5 LPA. Key Recruiters: TCS Digital, Infosys, Cognizant, Accenture, Capgemini.</p>
+                                </div>
+
+                                <div class="bg-surface-container p-3 rounded-lg border border-outline-variant text-xs">
+                                    <div class="font-semibold text-primary mb-1">🏛️ Campus Infrastructure</div>
+                                    <p class="text-on-surface-variant">Spacious campus on Vadgaon hill with central library, multi-purpose sports complex, and high-speed Wi-Fi labs.</p>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="p-2 bg-surface-container-low border border-outline-variant rounded">
+                                        <span class="text-primary font-bold">👍 Pros:</span>
+                                        <p class="text-on-surface-variant">Strong alumni network, vibrant tech fests (Sinhgad Karandak).</p>
+                                    </div>
+                                    <div class="p-2 bg-surface-container-low border border-outline-variant rounded">
+                                        <span class="text-error font-bold">👎 Cons:</span>
+                                        <p class="text-on-surface-variant">Strict attendance rules (75% compulsory).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/auto-apply?college=Sinhgad%20College%20of%20Engineering,%20Pune" class="w-full bg-primary text-on-primary py-2.5 px-4 rounded font-label-mono text-center hover:bg-primary-container transition-colors block font-semibold text-sm">
+                            Apply via Admission OS ➔
+                        </a>
+                    </div>
+
+                    <!-- College 2 -->
+                    <div class="bg-surface border border-outline-variant rounded-xl p-stack-lg shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="font-headline-sm text-xl font-semibold text-on-surface">D.Y. Patil College of Engineering, Akurdi</h3>
+                                    <span class="text-xs font-status-mono text-on-surface-variant">Akurdi, Pune • Autonomous</span>
+                                </div>
+                                <span class="bg-primary text-on-primary font-status-mono text-xs px-2.5 py-1 rounded">4.2 / 5.0 ⭐</span>
+                            </div>
+
+                            <div class="space-y-3 my-4">
+                                <div class="bg-surface-container p-3 rounded-lg border border-outline-variant text-xs">
+                                    <div class="font-semibold text-primary mb-1">💼 Placement Report</div>
+                                    <p class="text-on-surface-variant">Highest CTC: ₹26 LPA | Median CTC: ₹6.2 LPA. Key Recruiters: Amazon, Virtusa, Barclays, Nvidia, Dassault Systems.</p>
+                                </div>
+
+                                <div class="bg-surface-container p-3 rounded-lg border border-outline-variant text-xs">
+                                    <div class="font-semibold text-primary mb-1">🏛️ Campus Infrastructure</div>
+                                    <p class="text-on-surface-variant">Modern smart classrooms, innovation incubators, robotics center, and premium hostel facilities.</p>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="p-2 bg-surface-container-low border border-outline-variant rounded">
+                                        <span class="text-primary font-bold">👍 Pros:</span>
+                                        <p class="text-on-surface-variant">High placement conversion for CSE/IT, proactive T&P cell.</p>
+                                    </div>
+                                    <div class="p-2 bg-surface-container-low border border-outline-variant rounded">
+                                        <span class="text-error font-bold">👎 Cons:</span>
+                                        <p class="text-on-surface-variant">Higher tuition fee structure compared to state government colleges.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/auto-apply?college=D.Y.%20Patil%20College%20of%20Engineering,%20Akurdi,%20Pune" class="w-full bg-primary text-on-primary py-2.5 px-4 rounded font-label-mono text-center hover:bg-primary-container transition-colors block font-semibold text-sm">
+                            Apply via Admission OS ➔
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer Status Pipeline -->
+    <footer class="fixed bottom-0 left-rail-width right-0 h-pipeline-height bg-surface-container-highest border-t border-outline-variant z-50 flex items-stretch">
+        <div class="w-2/3 border-r border-outline-variant flex items-center px-stack-lg gap-0 overflow-x-auto">
+            <a href="/" class="flex-1 flex items-center gap-stack-md group cursor-pointer">
+                <div class="w-8 h-8 flex items-center justify-center bg-primary text-on-primary text-label-mono font-label-mono">01</div>
+                <span class="text-label-mono font-label-mono text-primary uppercase">Profile & Discovery</span>
+            </a>
+            <div class="w-8 h-[1px] bg-outline-variant"></div>
+            <a href="/matched" class="flex-1 flex items-center gap-stack-md group cursor-pointer">
+                <div class="w-8 h-8 flex items-center justify-center border border-outline text-on-surface-variant text-label-mono font-label-mono">02</div>
+                <span class="text-label-mono font-label-mono text-on-surface-variant uppercase">Matched Matrix</span>
+            </a>
+            <div class="w-8 h-[1px] bg-outline-variant"></div>
+            <a href="/reviews" class="flex-1 flex items-center gap-stack-md group cursor-pointer">
+                <div class="w-8 h-8 flex items-center justify-center bg-primary text-on-primary text-label-mono font-label-mono">03</div>
+                <span class="text-label-mono font-label-mono text-primary uppercase">Review Agent</span>
+            </a>
+        </div>
+        <div class="w-1/3 bg-surface-container-low px-stack-md py-stack-sm overflow-y-hidden">
+            <div class="flex justify-between items-center mb-1">
+                <span class="text-label-mono font-label-mono text-on-surface-variant uppercase">Live System Log</span>
+                <span class="material-symbols-outlined text-[14px] text-on-surface-variant">terminal</span>
+            </div>
+            <div class="font-status-mono text-status-mono text-primary truncate">[REVIEW_AGENT] Loaded sentiment analytics & verified alumni ratings.</div>
+        </div>
+    </footer>
+</body>
+</html>
